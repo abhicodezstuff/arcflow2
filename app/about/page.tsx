@@ -1,8 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
 import { ArrowRight, ArrowUpRight, Layers3, Target, Zap } from "lucide-react";
+
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Container } from "@/components/layout/container";
+
+export const metadata: Metadata = {
+  title: "About — Arcflow",
+  description:
+    "Learn why Arcflow exists and how we're building simpler, faster automation for the work that happens between your tools.",
+};
 
 const principles = [
   {
@@ -27,10 +36,10 @@ const principles = [
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-[#09090B]">
+    <main className="min-h-screen bg-[#09090B]/30">
       <Navbar />
 
-      <section className="border-b border-white/[0.06]">
+      <section className="border-b border-white/[0.06] bg-[#09090B]/20">
         <Container>
           <div className="mx-auto max-w-4xl px-4 pb-24 pt-24 text-center sm:pt-32 lg:pb-32 lg:pt-40">
             <p className="text-sm font-medium text-[#8EA2FF]">
@@ -49,7 +58,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="py-24 sm:py-32">
+      <section className="bg-[#09090B]/10 py-24 sm:py-32">
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
             <div>
@@ -85,7 +94,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="border-t border-white/[0.06] py-24 sm:py-32">
+      <section className="border-t border-white/[0.06] bg-[#09090B]/10 py-24 sm:py-32">
         <Container>
           <div className="max-w-2xl">
             <p className="text-sm font-medium text-[#8EA2FF]">
@@ -108,7 +117,7 @@ export default function AboutPage() {
               return (
                 <div
                   key={principle.title}
-                  className="rounded-2xl border border-white/[0.08] bg-[#0F1012] p-7 sm:p-8"
+                  className="rounded-2xl border border-white/[0.08] bg-[#0F1012]/60 p-7 backdrop-blur-sm transition-colors duration-300 hover:border-white/[0.12] hover:bg-[#111216]/70 sm:p-8"
                 >
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.03]">
                     <Icon size={18} className="text-zinc-400" />
@@ -128,9 +137,9 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="border-t border-white/[0.06] py-24 sm:py-32">
+      <section className="border-t border-white/[0.06] bg-[#09090B]/20 py-24 sm:py-32">
         <Container>
-          <div className="relative overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0F1012] px-6 py-14 sm:px-10 sm:py-16">
+          <div className="relative overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0F1012]/60 px-6 py-14 backdrop-blur-sm sm:px-10 sm:py-16">
             <div className="max-w-2xl">
               <p className="text-sm font-medium text-[#8EA2FF]">
                 The future of work
@@ -151,6 +160,7 @@ export default function AboutPage() {
                 className="group mt-8 inline-flex h-11 items-center gap-2 rounded-lg bg-zinc-100 px-5 text-sm font-medium text-zinc-950 transition-colors hover:bg-white"
               >
                 Start building free
+
                 <ArrowRight
                   size={15}
                   className="transition-transform duration-200 group-hover:translate-x-0.5"

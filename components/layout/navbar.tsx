@@ -8,7 +8,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="relative z-50 w-full border-b border-white/[0.06] bg-transparent">
+    <header className="relative z-50 w-full border-b border-white/[0.06] bg-[#09090B]/20 backdrop-blur-md">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 sm:px-8 lg:px-10">
         <Link
           href="/"
@@ -17,7 +17,7 @@ export function Navbar() {
         >
           <span className="relative flex h-7 w-7 items-center justify-center">
             <span className="absolute h-3.5 w-3.5 rounded-[4px] bg-[#5B7CFF] transition-transform duration-300 group-hover:translate-x-0.5" />
-            <span className="absolute h-3.5 w-3.5 translate-x-1.5 rounded-[4px] border border-zinc-500 bg-[#09090B] transition-transform duration-300 group-hover:translate-x-2" />
+            <span className="absolute h-3.5 w-3.5 translate-x-1.5 rounded-[4px] border border-zinc-500 bg-[#09090B]/50 transition-transform duration-300 group-hover:translate-x-2" />
           </span>
 
           <span className="text-lg font-semibold tracking-tight text-zinc-100">
@@ -78,20 +78,16 @@ export function Navbar() {
         <button
           type="button"
           onClick={() => setOpen(!open)}
-          className="rounded-lg border border-white/[0.08] px-3 py-2 text-sm text-zinc-300 transition-colors hover:bg-white/[0.04] md:hidden"
+          className="rounded-lg border border-white/[0.08] bg-white/[0.02] px-3 py-2 text-sm text-zinc-300 backdrop-blur-sm transition-colors hover:bg-white/[0.04]"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >
-          {open ? (
-            <X size={18} />
-          ) : (
-            "Menu"
-          )}
+          {open ? <X size={18} /> : "Menu"}
         </button>
       </nav>
 
       {open && (
-        <div className="border-t border-white/[0.06] bg-[#09090B]/60 backdrop-blur-md md:hidden">
+        <div className="border-t border-white/[0.06] bg-[#09090B]/50 backdrop-blur-xl md:hidden">
           <div className="mx-auto max-w-7xl px-6 py-6 sm:px-8">
             <div className="flex flex-col gap-1">
               <Link

@@ -1,4 +1,7 @@
+
+import type { Metadata } from "next";
 import Link from "next/link";
+
 import { ArrowRight, Check, GitBranch, Sparkles, Zap } from "lucide-react";
 
 import { Navbar } from "@/components/layout/navbar";
@@ -43,6 +46,12 @@ const featureGroups = [
     ],
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Features — Arcflow",
+  description:
+    "Build visual workflows, add AI-powered actions, and automate repetitive work between the tools your team already uses.",
+};
 
 export default function FeaturesPage() {
   return (
@@ -110,10 +119,7 @@ export default function FeaturesPage() {
                             className="flex items-center gap-3 text-sm text-zinc-400"
                           >
                             <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/[0.04]">
-                              <Check
-                                size={12}
-                                className="text-zinc-400"
-                              />
+                              <Check size={12} className="text-zinc-400" />
                             </span>
 
                             {feature}

@@ -1,15 +1,18 @@
+
 import Link from "next/link";
+
 import { ArrowRight, Mail, MessageSquare } from "lucide-react";
+
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Container } from "@/components/layout/container";
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-[#09090B]">
+    <main className="min-h-screen bg-[#09090B]/30">
       <Navbar />
 
-      <section className="border-b border-white/[0.06]">
+      <section className="border-b border-white/[0.06] bg-[#09090B]/20">
         <Container>
           <div className="mx-auto max-w-4xl px-4 pb-24 pt-24 text-center sm:pt-32 lg:pb-32 lg:pt-40">
             <p className="text-sm font-medium text-[#8EA2FF]">
@@ -28,10 +31,10 @@ export default function ContactPage() {
         </Container>
       </section>
 
-      <section className="py-24 sm:py-32">
+      <section className="bg-[#09090B]/10 py-24 sm:py-32">
         <Container>
           <div className="grid gap-6 lg:grid-cols-2">
-            <div className="rounded-2xl border border-white/[0.08] bg-[#0F1012] p-7 sm:p-10">
+            <div className="rounded-2xl border border-white/[0.08] bg-[#0F1012]/60 p-7 backdrop-blur-sm sm:p-10">
               <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.03]">
                 <MessageSquare size={19} className="text-[#8EA2FF]" />
               </div>
@@ -50,6 +53,7 @@ export default function ContactPage() {
                 className="group mt-8 inline-flex h-11 items-center gap-2 rounded-lg bg-zinc-100 px-5 text-sm font-medium text-zinc-950 transition-colors hover:bg-white"
               >
                 Send us a message
+
                 <ArrowRight
                   size={15}
                   className="transition-transform duration-200 group-hover:translate-x-0.5"
@@ -57,7 +61,7 @@ export default function ContactPage() {
               </Link>
             </div>
 
-            <div className="rounded-2xl border border-white/[0.08] bg-[#0F1012] p-7 sm:p-10">
+            <div className="rounded-2xl border border-white/[0.08] bg-[#0F1012]/60 p-7 backdrop-blur-sm sm:p-10">
               <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.03]">
                 <Mail size={19} className="text-zinc-400" />
               </div>
@@ -67,8 +71,8 @@ export default function ContactPage() {
               </h2>
 
               <p className="mt-4 max-w-md text-sm leading-7 text-zinc-500">
-                For general questions, partnerships, or anything else,
-                reach out directly.
+                For general questions, partnerships, or anything else, reach
+                out directly.
               </p>
 
               <a
@@ -82,7 +86,7 @@ export default function ContactPage() {
         </Container>
       </section>
 
-      <section className="border-t border-white/[0.06] py-24 sm:py-32">
+      <section className="border-t border-white/[0.06] bg-[#09090B]/20 py-24 sm:py-32">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm font-medium text-[#8EA2FF]">
@@ -103,6 +107,7 @@ export default function ContactPage() {
               className="group mt-8 inline-flex h-11 items-center gap-2 rounded-lg bg-zinc-100 px-5 text-sm font-medium text-zinc-950 transition-colors hover:bg-white"
             >
               Start building free
+
               <ArrowRight
                 size={15}
                 className="transition-transform duration-200 group-hover:translate-x-0.5"

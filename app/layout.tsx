@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+
 import { Geist, Geist_Mono } from "next/font/google";
 
 import "./globals.css";
@@ -19,6 +20,19 @@ export const metadata: Metadata = {
   title: "Arcflow — Automate the work between your tools.",
   description:
     "Automate workflows between the tools your team already uses.",
+  openGraph: {
+    title: "Arcflow — Automate the work between your tools.",
+    description:
+      "Automate workflows between the tools your team already uses.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Arcflow — Automate the work between your tools.",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

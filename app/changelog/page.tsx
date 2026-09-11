@@ -1,9 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
 import { ArrowRight, Sparkles } from "lucide-react";
 
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Container } from "@/components/layout/container";
+
+export const metadata: Metadata = {
+  title: "Changelog — Arcflow",
+  description:
+    "See the latest Arcflow product updates, improvements, integrations, and new workflow automation capabilities.",
+};
 
 const updates = [
   {
@@ -31,10 +39,10 @@ const updates = [
 
 export default function ChangelogPage() {
   return (
-    <main className="min-h-screen bg-[#09090B]">
+    <main className="min-h-screen bg-[#09090B]/30">
       <Navbar />
 
-      <section className="border-b border-white/[0.06]">
+      <section className="border-b border-white/[0.06] bg-[#09090B]/20">
         <Container>
           <div className="mx-auto max-w-4xl px-4 pb-24 pt-24 text-center sm:pt-32 lg:pb-32 lg:pt-40">
             <p className="text-sm font-medium text-[#8EA2FF]">
@@ -53,13 +61,13 @@ export default function ChangelogPage() {
         </Container>
       </section>
 
-      <section className="py-24 sm:py-32">
+      <section className="bg-[#09090B]/10 py-24 sm:py-32">
         <Container>
           <div className="mx-auto max-w-3xl space-y-5">
             {updates.map((update) => (
               <article
                 key={update.version}
-                className="rounded-2xl border border-white/[0.08] bg-[#0F1012] p-7 sm:p-9"
+                className="rounded-2xl border border-white/[0.08] bg-[#0F1012]/60 p-7 backdrop-blur-sm sm:p-9"
               >
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                   <div className="flex items-center gap-3">
@@ -95,7 +103,7 @@ export default function ChangelogPage() {
 
             <Link
               href="/signup"
-              className="mt-5 inline-flex items-center gap-2 text-sm text-zinc-300 hover:text-zinc-100"
+              className="mt-5 inline-flex items-center gap-2 text-sm text-zinc-300 transition-colors hover:text-zinc-100"
             >
               Try Arcflow
               <ArrowRight size={14} />

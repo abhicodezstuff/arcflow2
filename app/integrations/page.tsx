@@ -1,4 +1,6 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
 import {
   ArrowRight,
   ArrowUpRight,
@@ -14,6 +16,12 @@ import {
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Container } from "@/components/layout/container";
+
+export const metadata: Metadata = {
+  title: "Integrations — Arcflow",
+  description:
+    "Connect Arcflow with the tools your team already uses, including HubSpot, Gmail, Slack, Notion, PostgreSQL, GitHub, and webhooks.",
+};
 
 const integrations = [
   {
@@ -62,10 +70,10 @@ const integrations = [
 
 export default function IntegrationsPage() {
   return (
-    <main className="min-h-screen bg-[#09090B]">
+    <main className="min-h-screen bg-[#09090B]/30">
       <Navbar />
 
-      <section className="border-b border-white/[0.06]">
+      <section className="border-b border-white/[0.06] bg-[#09090B]/20">
         <Container>
           <div className="mx-auto max-w-4xl px-4 pb-24 pt-24 text-center sm:pt-32 lg:pb-32 lg:pt-40">
             <p className="text-sm font-medium text-[#8EA2FF]">
@@ -84,7 +92,7 @@ export default function IntegrationsPage() {
         </Container>
       </section>
 
-      <section className="py-24 sm:py-32">
+      <section className="bg-[#09090B]/10 py-24 sm:py-32">
         <Container>
           <div className="grid gap-px overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.08] sm:grid-cols-2 lg:grid-cols-3">
             {integrations.map((integration) => {
@@ -93,7 +101,7 @@ export default function IntegrationsPage() {
               return (
                 <div
                   key={integration.name}
-                  className="group bg-[#0F1012] p-7 transition-colors duration-300 hover:bg-[#121316] sm:p-8"
+                  className="group bg-[#0F1012]/60 p-7 backdrop-blur-sm transition-colors duration-300 hover:bg-[#121316]/70 sm:p-8"
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.03]">
@@ -124,7 +132,7 @@ export default function IntegrationsPage() {
               );
             })}
 
-            <div className="bg-[#0F1012] p-7 sm:p-8">
+            <div className="bg-[#0F1012]/60 p-7 backdrop-blur-sm sm:p-8">
               <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.03]">
                 <ArrowUpRight size={19} className="text-zinc-500" />
               </div>
@@ -146,9 +154,9 @@ export default function IntegrationsPage() {
         </Container>
       </section>
 
-      <section className="border-t border-white/[0.06] py-24 sm:py-32">
+      <section className="border-t border-white/[0.06] bg-[#09090B]/10 py-24 sm:py-32">
         <Container>
-          <div className="mx-auto max-w-3xl rounded-2xl border border-white/[0.08] bg-[#0F1012] px-6 py-14 text-center sm:px-10">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-white/[0.08] bg-[#0F1012]/60 px-6 py-14 text-center backdrop-blur-sm sm:px-10">
             <p className="text-sm font-medium text-[#8EA2FF]">
               Connect anything
             </p>
@@ -167,6 +175,7 @@ export default function IntegrationsPage() {
               className="group mt-8 inline-flex h-11 items-center gap-2 rounded-lg bg-zinc-100 px-5 text-sm font-medium text-zinc-950 transition-colors hover:bg-white"
             >
               Start building free
+
               <ArrowRight
                 size={15}
                 className="transition-transform duration-200 group-hover:translate-x-0.5"

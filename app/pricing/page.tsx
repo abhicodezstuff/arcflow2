@@ -1,4 +1,5 @@
 
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import { ArrowRight, Check } from "lucide-react";
@@ -101,6 +102,12 @@ const comparison = [
   },
 ];
 
+export const metadata: Metadata = {
+  title: "Pricing — Arcflow",
+  description:
+    "Explore Arcflow pricing plans for individuals, growing teams, and organizations automating work across their tools.",
+};
+
 export default function PricingPage() {
   return (
     <main className="min-h-screen bg-[#09090B]/30">
@@ -109,9 +116,7 @@ export default function PricingPage() {
       <section className="border-b border-white/[0.06] bg-[#09090B]/20">
         <Container>
           <div className="mx-auto max-w-4xl px-4 pb-20 pt-24 text-center sm:pt-32 lg:pb-24">
-            <p className="text-sm font-medium text-[#8EA2FF]">
-              Pricing
-            </p>
+            <p className="text-sm font-medium text-[#8EA2FF]">Pricing</p>
 
             <h1 className="mt-5 text-4xl font-semibold tracking-[-0.04em] text-zinc-100 sm:text-6xl">
               A plan for every stage of automation.
