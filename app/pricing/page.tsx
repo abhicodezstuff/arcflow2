@@ -1,5 +1,8 @@
+
 import Link from "next/link";
+
 import { ArrowRight, Check } from "lucide-react";
+
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Container } from "@/components/layout/container";
@@ -100,10 +103,10 @@ const comparison = [
 
 export default function PricingPage() {
   return (
-    <main className="min-h-screen bg-[#09090B]">
+    <main className="min-h-screen bg-[#09090B]/30">
       <Navbar />
 
-      <section className="border-b border-white/[0.06]">
+      <section className="border-b border-white/[0.06] bg-[#09090B]/20">
         <Container>
           <div className="mx-auto max-w-4xl px-4 pb-20 pt-24 text-center sm:pt-32 lg:pb-24">
             <p className="text-sm font-medium text-[#8EA2FF]">
@@ -122,20 +125,20 @@ export default function PricingPage() {
         </Container>
       </section>
 
-      <section className="py-24 sm:py-32">
+      <section className="bg-[#09090B]/10 py-24 sm:py-32">
         <Container>
           <div className="grid gap-4 lg:grid-cols-3">
             {plans.map((plan) => (
               <div
                 key={plan.name}
-                className={`relative rounded-2xl border p-7 sm:p-8 ${
+                className={`relative rounded-2xl border p-7 backdrop-blur-sm sm:p-8 ${
                   plan.featured
-                    ? "border-[#5B7CFF]/40 bg-[#111318]"
-                    : "border-white/[0.08] bg-[#0F1012]"
+                    ? "border-[#5B7CFF]/40 bg-[#111318]/70"
+                    : "border-white/[0.08] bg-[#0F1012]/60"
                 }`}
               >
                 {plan.featured && (
-                  <div className="absolute -top-3 left-6 rounded-full border border-[#5B7CFF]/30 bg-[#111318] px-3 py-1 text-xs font-medium text-[#8EA2FF]">
+                  <div className="absolute -top-3 left-6 rounded-full border border-[#5B7CFF]/30 bg-[#111318]/90 px-3 py-1 text-xs font-medium text-[#8EA2FF] backdrop-blur-sm">
                     Most popular
                   </div>
                 )}
@@ -197,7 +200,7 @@ export default function PricingPage() {
         </Container>
       </section>
 
-      <section className="border-t border-white/[0.06] py-24 sm:py-32">
+      <section className="border-t border-white/[0.06] bg-[#09090B]/10 py-24 sm:py-32">
         <Container>
           <div className="mx-auto max-w-5xl">
             <div className="max-w-2xl">
@@ -215,8 +218,8 @@ export default function PricingPage() {
               </p>
             </div>
 
-            <div className="mt-12 overflow-hidden rounded-2xl border border-white/[0.08]">
-              <div className="grid grid-cols-4 border-b border-white/[0.06] bg-[#0F1012]">
+            <div className="mt-12 overflow-hidden rounded-2xl border border-white/[0.08] bg-[#09090B]/30 backdrop-blur-sm">
+              <div className="grid grid-cols-4 border-b border-white/[0.06] bg-[#0F1012]/65">
                 <div className="p-4 text-xs font-medium uppercase tracking-wide text-zinc-600 sm:p-5">
                   Feature
                 </div>
@@ -261,9 +264,9 @@ export default function PricingPage() {
         </Container>
       </section>
 
-      <section className="border-t border-white/[0.06] py-24 sm:py-32">
+      <section className="border-t border-white/[0.06] bg-[#09090B]/10 py-24 sm:py-32">
         <Container>
-          <div className="mx-auto max-w-3xl rounded-2xl border border-white/[0.08] bg-[#0F1012] px-6 py-14 text-center sm:px-10">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-white/[0.08] bg-[#0F1012]/60 px-6 py-14 text-center backdrop-blur-sm sm:px-10">
             <h2 className="text-3xl font-semibold tracking-[-0.03em] text-zinc-100 sm:text-4xl">
               Start automating today.
             </h2>
@@ -278,6 +281,7 @@ export default function PricingPage() {
               className="group mt-8 inline-flex h-11 items-center gap-2 rounded-lg bg-zinc-100 px-5 text-sm font-medium text-zinc-950 transition-colors hover:bg-white"
             >
               Start building free
+
               <ArrowRight
                 size={15}
                 className="transition-transform duration-200 group-hover:translate-x-0.5"

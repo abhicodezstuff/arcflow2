@@ -2,9 +2,9 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 export function FinalCTA() {
   return (
-    <section className="border-t border-white/[0.06] py-24 sm:py-32">
+    <section className="border-t border-white/[0.06] bg-[#09090B]/30 py-20 sm:py-32">
       <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
-        <div className="relative overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0F1012] px-6 py-16 text-center sm:px-10 sm:py-20">
+        <div className="relative overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0F1012]/60 px-6 py-16 text-center backdrop-blur-sm sm:px-10 sm:py-20">
           <div className="relative mx-auto max-w-3xl">
             <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.03]">
               <Sparkles size={18} className="text-[#8EA2FF]" />

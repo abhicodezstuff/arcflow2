@@ -82,13 +82,11 @@ function FAQItem({
 
 export function FAQSection() {
   return (
-    <section className="border-t border-white/[0.06] py-24 sm:py-32">
+    <section className="border-t border-white/[0.06] bg-[#09090B]/30 py-20 sm:py-32">
       <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
         <div className="grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
           <div>
-            <p className="text-sm font-medium text-[#8EA2FF]">
-              FAQ
-            </p>
+            <p className="text-sm font-medium text-[#8EA2FF]">FAQ</p>
 
             <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-zinc-100 sm:text-4xl">
               Questions, answered.
@@ -100,7 +98,7 @@ export function FAQSection() {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-white/[0.08] bg-[#0F1012] px-6 sm:px-8">
+          <div className="rounded-2xl border border-white/[0.08] bg-[#0F1012]/60 px-6 backdrop-blur-sm sm:px-8">
             {faqs.map((faq) => (
               <FAQItem
                 key={faq.question}

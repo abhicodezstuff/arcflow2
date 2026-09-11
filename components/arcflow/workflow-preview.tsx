@@ -11,18 +11,19 @@ import {
 } from "lucide-react";
 
 export function WorkflowPreview() {
-    return (
-        <div
-          id="workflow"
-          className="relative mx-auto mt-20 w-full max-w-5xl"
-        >
+  return (
+    <div
+      id="workflow"
+      className="relative mx-auto mt-20 w-full max-w-5xl"
+    >
       <div className="absolute left-1/2 top-1/2 -z-10 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#5B7CFF]/10 blur-3xl" />
 
-      <div className="overflow-hidden rounded-2xl border border-white/[0.1] bg-[#0F1012] shadow-2xl shadow-black/40">
+      <div className="overflow-hidden rounded-2xl border border-white/[0.1] bg-[#0F1012]/60 shadow-2xl shadow-black/40 backdrop-blur-sm">
         {/* Header */}
         <div className="flex h-12 items-center justify-between border-b border-white/[0.06] px-5">
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-[#5B7CFF]" />
+
             <span className="text-xs font-medium text-zinc-300">
               Lead qualification
             </span>
@@ -42,7 +43,7 @@ export function WorkflowPreview() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="rounded-xl border border-white/[0.08] bg-[#151619] p-5"
+              className="rounded-xl border border-white/[0.08] bg-[#151619]/60 p-5"
             >
               <div className="mb-4 flex items-center justify-between">
                 <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.03]">
@@ -68,7 +69,7 @@ export function WorkflowPreview() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.15 }}
-              className="relative rounded-xl border border-[#5B7CFF]/30 bg-[#10121A] p-5"
+              className="relative rounded-xl border border-[#5B7CFF]/30 bg-[#10121A]/70 p-5"
             >
               {/* Active indicator */}
               <motion.div
@@ -84,7 +85,7 @@ export function WorkflowPreview() {
                 className="absolute -right-1.5 -top-1.5 h-3 w-3 rounded-full bg-[#5B7CFF]"
               />
 
-              <div className="absolute -top-2.5 left-5 rounded-full border border-[#5B7CFF]/30 bg-[#10121A] px-2 py-0.5 text-[10px] font-medium text-[#8EA2FF]">
+              <div className="absolute -top-2.5 left-5 rounded-full border border-[#5B7CFF]/30 bg-[#10121A]/80 px-2 py-0.5 text-[10px] font-medium text-[#8EA2FF]">
                 Arcflow AI
               </div>
 
@@ -106,7 +107,7 @@ export function WorkflowPreview() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="rounded-xl border border-white/[0.08] bg-[#151619] p-5"
+              className="rounded-xl border border-white/[0.08] bg-[#151619]/60 p-5"
             >
               <div className="mb-4 flex items-center justify-between">
                 <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.03]">

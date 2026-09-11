@@ -19,14 +19,14 @@ const resourceLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/[0.06]">
+    <footer className="border-t border-white/[0.06] bg-[#09090B]/30">
       <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
         <div className="grid gap-12 py-16 lg:grid-cols-[1.4fr_2fr]">
           <div className="max-w-sm">
             <Link href="/" className="inline-flex items-center gap-2.5">
               <span className="relative flex h-7 w-7 items-center justify-center">
                 <span className="absolute h-3.5 w-3.5 rounded-[4px] bg-[#5B7CFF]" />
-                <span className="absolute h-3.5 w-3.5 translate-x-1.5 rounded-[4px] border border-zinc-500 bg-[#09090B]" />
+                <span className="absolute h-3.5 w-3.5 translate-x-1.5 rounded-[4px] border border-zinc-500 bg-[#09090B]/70" />
               </span>
 
               <span className="text-lg font-semibold tracking-tight text-zinc-100">
@@ -43,7 +43,7 @@ export function Footer() {
               <a
                 href="#"
                 aria-label="GitHub"
-                className="flex h-9 items-center justify-center rounded-lg border border-white/[0.08] px-3 text-xs font-medium text-zinc-500 transition-colors hover:bg-white/[0.04] hover:text-zinc-200"
+                className="flex h-9 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.02] px-3 text-xs font-medium text-zinc-500 transition-colors hover:bg-white/[0.04] hover:text-zinc-200"
               >
                 GitHub
               </a>
@@ -51,7 +51,7 @@ export function Footer() {
               <a
                 href="#"
                 aria-label="Twitter"
-                className="flex h-9 items-center justify-center rounded-lg border border-white/[0.08] px-3 text-xs font-medium text-zinc-500 transition-colors hover:bg-white/[0.04] hover:text-zinc-200"
+                className="flex h-9 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.02] px-3 text-xs font-medium text-zinc-500 transition-colors hover:bg-white/[0.04] hover:text-zinc-200"
               >
                 X
               </a>
@@ -59,7 +59,7 @@ export function Footer() {
               <a
                 href="#"
                 aria-label="LinkedIn"
-                className="flex h-9 items-center justify-center rounded-lg border border-white/[0.08] px-3 text-xs font-medium text-zinc-500 transition-colors hover:bg-white/[0.04] hover:text-zinc-200"
+                className="flex h-9 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.02] px-3 text-xs font-medium text-zinc-500 transition-colors hover:bg-white/[0.04] hover:text-zinc-200"
               >
                 LinkedIn
               </a>

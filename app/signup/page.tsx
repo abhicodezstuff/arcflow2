@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
+
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Container } from "@/components/layout/container";
@@ -12,10 +13,10 @@ const benefits = [
 
 export default function SignupPage() {
   return (
-    <main className="min-h-screen bg-[#09090B]">
+    <main className="min-h-screen bg-[#09090B]/30">
       <Navbar />
 
-      <section className="py-24 sm:py-32">
+      <section className="bg-[#09090B]/20 py-24 sm:py-32">
         <Container>
           <div className="mx-auto grid max-w-5xl gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-center lg:gap-20">
             <div>
@@ -47,7 +48,7 @@ export default function SignupPage() {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-white/[0.08] bg-[#0F1012] p-7 sm:p-9">
+            <div className="rounded-2xl border border-white/[0.08] bg-[#0F1012]/65 p-7 backdrop-blur-sm sm:p-9">
               <div>
                 <h2 className="text-xl font-semibold tracking-[-0.02em] text-zinc-100">
                   Create your workspace
@@ -71,7 +72,7 @@ export default function SignupPage() {
                     id="name"
                     type="text"
                     placeholder="Alex Morgan"
-                    className="mt-2 h-11 w-full rounded-lg border border-white/[0.08] bg-[#09090B] px-3.5 text-sm text-zinc-100 outline-none placeholder:text-zinc-700 focus:border-[#5B7CFF]/50"
+                    className="mt-2 h-11 w-full rounded-lg border border-white/[0.08] bg-[#09090B]/65 px-3.5 text-sm text-zinc-100 outline-none backdrop-blur-sm placeholder:text-zinc-700 focus:border-[#5B7CFF]/50"
                   />
                 </div>
 
@@ -87,7 +88,7 @@ export default function SignupPage() {
                     id="email"
                     type="email"
                     placeholder="alex@company.com"
-                    className="mt-2 h-11 w-full rounded-lg border border-white/[0.08] bg-[#09090B] px-3.5 text-sm text-zinc-100 outline-none placeholder:text-zinc-700 focus:border-[#5B7CFF]/50"
+                    className="mt-2 h-11 w-full rounded-lg border border-white/[0.08] bg-[#09090B]/65 px-3.5 text-sm text-zinc-100 outline-none backdrop-blur-sm placeholder:text-zinc-700 focus:border-[#5B7CFF]/50"
                   />
                 </div>
 
@@ -103,7 +104,7 @@ export default function SignupPage() {
                     id="password"
                     type="password"
                     placeholder="Create a password"
-                    className="mt-2 h-11 w-full rounded-lg border border-white/[0.08] bg-[#09090B] px-3.5 text-sm text-zinc-100 outline-none placeholder:text-zinc-700 focus:border-[#5B7CFF]/50"
+                    className="mt-2 h-11 w-full rounded-lg border border-white/[0.08] bg-[#09090B]/65 px-3.5 text-sm text-zinc-100 outline-none backdrop-blur-sm placeholder:text-zinc-700 focus:border-[#5B7CFF]/50"
                   />
                 </div>
 
@@ -112,6 +113,7 @@ export default function SignupPage() {
                   className="group inline-flex h-11 w-full items-center justify-center gap-2 rounded-lg bg-zinc-100 text-sm font-medium text-zinc-950 transition-colors hover:bg-white"
                 >
                   Create workspace
+
                   <ArrowRight
                     size={15}
                     className="transition-transform duration-200 group-hover:translate-x-0.5"

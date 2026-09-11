@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Check, GitBranch, Sparkles, Zap } from "lucide-react";
+
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Container } from "@/components/layout/container";
@@ -45,10 +46,10 @@ const featureGroups = [
 
 export default function FeaturesPage() {
   return (
-    <main className="min-h-screen bg-[#09090B]">
+    <main className="min-h-screen bg-[#09090B]/30">
       <Navbar />
 
-      <section className="border-b border-white/[0.06]">
+      <section className="border-b border-white/[0.06] bg-[#09090B]/20">
         <Container>
           <div className="mx-auto max-w-4xl px-4 pb-24 pt-24 text-center sm:pt-32 lg:pb-32 lg:pt-40">
             <p className="text-sm font-medium text-[#8EA2FF]">
@@ -67,7 +68,7 @@ export default function FeaturesPage() {
         </Container>
       </section>
 
-      <section className="py-24 sm:py-32">
+      <section className="bg-[#09090B]/20 py-24 sm:py-32">
         <Container>
           <div className="space-y-6">
             {featureGroups.map((group, index) => {
@@ -76,7 +77,7 @@ export default function FeaturesPage() {
               return (
                 <div
                   key={group.title}
-                  className="grid gap-10 rounded-2xl border border-white/[0.08] bg-[#0F1012] p-7 sm:p-10 lg:grid-cols-2 lg:p-12"
+                  className="grid gap-10 rounded-2xl border border-white/[0.08] bg-[#0F1012]/55 p-7 backdrop-blur-sm transition-colors duration-300 hover:border-white/[0.12] hover:bg-[#111216]/65 sm:p-10 lg:grid-cols-2 lg:p-12"
                 >
                   <div>
                     <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.03]">
@@ -97,7 +98,7 @@ export default function FeaturesPage() {
                   </div>
 
                   <div className="flex items-center">
-                    <div className="w-full rounded-xl border border-white/[0.06] bg-[#09090B] p-6">
+                    <div className="w-full rounded-xl border border-white/[0.06] bg-[#09090B]/45 p-6 backdrop-blur-sm">
                       <p className="text-xs font-medium uppercase tracking-wide text-zinc-600">
                         Included
                       </p>
@@ -108,8 +109,11 @@ export default function FeaturesPage() {
                             key={feature}
                             className="flex items-center gap-3 text-sm text-zinc-400"
                           >
-                            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/[0.04]">
-                              <Check size={12} className="text-zinc-400" />
+                            <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/[0.04]">
+                              <Check
+                                size={12}
+                                className="text-zinc-400"
+                              />
                             </span>
 
                             {feature}
@@ -125,9 +129,9 @@ export default function FeaturesPage() {
         </Container>
       </section>
 
-      <section className="border-t border-white/[0.06] py-24 sm:py-32">
+      <section className="border-t border-white/[0.06] bg-[#09090B]/20 py-24 sm:py-32">
         <Container>
-          <div className="mx-auto max-w-3xl rounded-2xl border border-white/[0.08] bg-[#0F1012] px-6 py-14 text-center sm:px-10">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-white/[0.08] bg-[#0F1012]/55 px-6 py-14 text-center backdrop-blur-sm sm:px-10">
             <h2 className="text-3xl font-semibold tracking-[-0.03em] text-zinc-100 sm:text-4xl">
               Ready to automate the repetitive work?
             </h2>
@@ -141,6 +145,7 @@ export default function FeaturesPage() {
               className="group mt-8 inline-flex h-11 items-center gap-2 rounded-lg bg-zinc-100 px-5 text-sm font-medium text-zinc-950 transition-colors hover:bg-white"
             >
               Start building free
+
               <ArrowRight
                 size={15}
                 className="transition-transform duration-200 group-hover:translate-x-0.5"

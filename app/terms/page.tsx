@@ -1,4 +1,6 @@
+
 import Link from "next/link";
+
 import { ArrowLeft } from "lucide-react";
 
 import { Navbar } from "@/components/layout/navbar";
@@ -7,10 +9,10 @@ import { Container } from "@/components/layout/container";
 
 export default function TermsPage() {
   return (
-    <main className="min-h-screen bg-[#09090B]">
+    <main className="min-h-screen bg-[#09090B]/30">
       <Navbar />
 
-      <section className="border-b border-white/[0.06]">
+      <section className="border-b border-white/[0.06] bg-[#09090B]/20">
         <Container>
           <div className="mx-auto max-w-3xl px-4 pb-20 pt-24 sm:pt-32">
             <Link
@@ -36,7 +38,7 @@ export default function TermsPage() {
         </Container>
       </section>
 
-      <section className="py-20 sm:py-28">
+      <section className="bg-[#09090B]/10 py-20 sm:py-28">
         <Container>
           <article className="mx-auto max-w-3xl space-y-12 text-sm leading-7 text-zinc-500">
             <div>
@@ -126,3 +128,4 @@ export default function TermsPage() {
     </main>
   );
 }
+

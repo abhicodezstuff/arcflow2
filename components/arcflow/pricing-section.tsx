@@ -48,12 +48,10 @@ const plans = [
 
 export function PricingSection() {
   return (
-    <section className="border-t border-white/[0.06] py-24 sm:py-32">
+    <section className="border-t border-white/[0.06] bg-[#09090B]/30 py-24 sm:py-32">
       <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-medium text-[#8EA2FF]">
-            Pricing
-          </p>
+          <p className="text-sm font-medium text-[#8EA2FF]">Pricing</p>
 
           <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-zinc-100 sm:text-4xl">
             Start small. Automate more.
@@ -68,14 +66,14 @@ export function PricingSection() {
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`relative rounded-2xl border p-7 sm:p-8 ${
+              className={`relative rounded-2xl border p-7 backdrop-blur-sm sm:p-8 ${
                 plan.featured
-                  ? "border-[#5B7CFF]/40 bg-[#111318]"
-                  : "border-white/[0.08] bg-[#0F1012]"
+                  ? "border-[#5B7CFF]/40 bg-[#111318]/75"
+                  : "border-white/[0.08] bg-[#0F1012]/60"
               }`}
             >
               {plan.featured && (
-                <div className="absolute -top-3 left-6 rounded-full border border-[#5B7CFF]/30 bg-[#111318] px-3 py-1 text-xs font-medium text-[#8EA2FF]">
+                <div className="absolute -top-3 left-6 rounded-full border border-[#5B7CFF]/30 bg-[#111318]/90 px-3 py-1 text-xs font-medium text-[#8EA2FF]">
                   Most popular
                 </div>
               )}
